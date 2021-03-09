@@ -162,6 +162,67 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/09/vue-tips/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Higer">
+      <meta itemprop="description" content="Good good study">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Higer's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/09/vue-tips/" class="post-title-link" itemprop="url">vue tips</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-09 15:19:15 / Modified: 15:23:40" itemprop="dateCreated datePublished" datetime="2021-03-09T15:19:15+11:00">2021-03-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="In-Dockfile-pass-environment-parameter-to-VUE"><a href="#In-Dockfile-pass-environment-parameter-to-VUE" class="headerlink" title="In Dockfile, pass environment parameter to VUE"></a>In Dockfile, pass environment parameter to VUE</h1><p>varible musts start with VUE_APP_ previx, for example</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">environment:  </span><br><span class="line">  - VUE_APP_BACKEND_URL&#x3D;http:&#x2F;&#x2F;localhost:80&#x2F;api&#x2F;todos</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/04/docker-usage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -193,7 +254,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-05 16:41:08" itemprop="dateModified" datetime="2021-03-05T16:41:08+11:00">2021-03-05</time>
+                <time title="Modified: 2021-03-09 15:37:57" itemprop="dateModified" datetime="2021-03-09T15:37:57+11:00">2021-03-09</time>
               </span>
 
           
@@ -262,7 +323,7 @@
 
 <p>a example of Dockerfile </p>
 <blockquote>
-<p>#content<br>FROM    centos:6.7<br>MAINTAINER      Fisher “<a href="mailto:&#x66;&#105;&#x73;&#x68;&#101;&#114;&#64;&#x73;&#117;&#100;&#x6f;&#112;&#x73;&#46;&#x63;&#x6f;&#x6d;">&#x66;&#105;&#x73;&#x68;&#101;&#114;&#64;&#x73;&#117;&#100;&#x6f;&#112;&#x73;&#46;&#x63;&#x6f;&#x6d;</a>“<br>RUN     /bin/echo ‘root:123456’ |chpasswd<br>RUN     useradd runoob<br>RUN     /bin/echo ‘runoob:123456’ |chpasswd<br>RUN     /bin/echo -e “LANG=&quot;en_US.UTF-8&quot;“ &gt;/etc/default/local<br>EXPOSE  22<br>EXPOSE  80<br>CMD     /usr/sbin/sshd -D</p>
+<p>#content<br>FROM    centos:6.7<br>MAINTAINER      Fisher “<a href="mailto:&#102;&#x69;&#115;&#x68;&#101;&#x72;&#x40;&#115;&#x75;&#x64;&#x6f;&#112;&#115;&#46;&#99;&#111;&#109;">&#102;&#x69;&#115;&#x68;&#101;&#x72;&#x40;&#115;&#x75;&#x64;&#x6f;&#112;&#115;&#46;&#99;&#111;&#109;</a>“<br>RUN     /bin/echo ‘root:123456’ |chpasswd<br>RUN     useradd runoob<br>RUN     /bin/echo ‘runoob:123456’ |chpasswd<br>RUN     /bin/echo -e “LANG=&quot;en_US.UTF-8&quot;“ &gt;/etc/default/local<br>EXPOSE  22<br>EXPOSE  80<br>CMD     /usr/sbin/sshd -D</p>
 </blockquote>
 <p>create a image</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t runoob&#x2F;centos:6.7 .</span><br></pre></td></tr></table></figure>
@@ -299,6 +360,13 @@
 <p>install ping/ifconfig command</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get update</span><br><span class="line">$ apt-get install iputils-ping</span><br><span class="line">$ apt-get install net-tools</span><br></pre></td></tr></table></figure>
 
+<h1 id="docker-compose"><a href="#docker-compose" class="headerlink" title="docker-compose"></a>docker-compose</h1><p>comman commands</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker-compose up -d</span><br><span class="line">$ docker-compose down</span><br><span class="line">$ docker-compose down --rmi local</span><br><span class="line">$ docker-compose -f file_name up -d</span><br></pre></td></tr></table></figure>
+
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><p>docker-compose will create new network(named with folder name) so that containers can access each other (by using the format <a target="_blank" rel="noopener" href="http://container_name/">http://container_name</a>). </p>
+<p>use command “docker network ls” to show all the network</p>
+<p>The frontend can use different path to access different backend api, for example:<br>/api/cars/, /api/food/, /api/weather/ …<br>nginx docker can forward different api access to different url by defining the rules(forward to different containers)</p>
+<p>By this way, it only needs to expose 80 port for the frontend nginx docker container to the user. All the backend access can be reversed proxy through nginx and forwarded to the related backend container.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>$<br>```</p>
 
@@ -578,7 +646,7 @@ Bored
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
